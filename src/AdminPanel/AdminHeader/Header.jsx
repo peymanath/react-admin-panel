@@ -30,7 +30,6 @@ export default function Header() {
 
     return (
         <>
-
             <header className="bg-white border-b border-[#a1a1a13e] shadow-md">
 
                 <div className="flex items-center justify-between py-3 px-5">
@@ -57,14 +56,20 @@ export default function Header() {
 
                         </IconBackground>
 
+                        <IconBackground clickable={true} counter={(90)} bgColor={"bg-green-500"}>
+
+                            <NotificationsActive sx={{ fontSize: 25 }} />
+
+                            <MessageItem textColor={"text-green-500"} bgColor={"bg-white"} hoverColor={"hover:bg-green-500"} />
+
+                        </IconBackground>
+                        
                         <IconBackground clickable={false} bgColor={["bg-yellow-500"]}>
                             <Forum sx={{ fontSize: 25 }} />
                         </IconBackground>
 
                     </div>
-
                 </div>
-
             </header>
         </>
     )

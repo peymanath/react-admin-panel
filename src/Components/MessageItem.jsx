@@ -21,7 +21,7 @@ export default function MessageItem(Data) {
                         </li>
                     ))
 
-                    : <li className="px-5 py-2 text-center"><span>صندق خالی است</span></li>
+                    : <li className="px-5 py-2 text-center border-b-slate-300 border-b "><span>صندق خالی است</span></li>
                 }
 
             </ul>
