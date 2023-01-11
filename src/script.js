@@ -15,9 +15,7 @@ document.addEventListener('click', (event) => {
         const allIcon = document.querySelectorAll('.IconHeaderItem');
         
         allIcon.forEach((item) => {
-
-            console.log(item);
-
+            
             if (!item.classList.contains('hidden')) {
                 item.classList.add('hidden')
             }

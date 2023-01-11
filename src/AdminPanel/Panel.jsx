@@ -7,8 +7,13 @@ export default function Panel() {
         <section className='flex h-full'>
 
             <Sidebar />
-            <Header />
 
-        </section>
+            <div className="flex-1 w-full md:w-8/12 lg:w-4/6">
+                <Header />
+
+            </div>
+
+
+        </section >
     )
 }

@@ -29,7 +29,7 @@ export default function Header() {
     ]
 
     return (
-        <div className="flex-1 w-full md:w-8/12 lg:w-4/6">
+        <>
 
             <header className="bg-white border-b border-[#a1a1a13e] shadow-md">
 
@@ -51,14 +51,14 @@ export default function Header() {
 
                         <IconBackground clickable={true} counter={(10)} bgColor={"bg-red-500"}>
 
-                            <NotificationsActive sx={{fontSize:25}} />
+                            <NotificationsActive sx={{ fontSize: 25 }} />
 
                             <MessageItem item={listMessage} textColor={"text-red-500"} bgColor={"bg-white"} hoverColor={"hover:bg-red-500"} />
 
                         </IconBackground>
 
                         <IconBackground clickable={false} bgColor={["bg-yellow-500"]}>
-                            <Forum sx={{fontSize:25}} />
+                            <Forum sx={{ fontSize: 25 }} />
                         </IconBackground>
 
                     </div>
@@ -66,9 +66,7 @@ export default function Header() {
                 </div>
 
             </header>
-
-
-        </div>
+        </>
     )
 }
 

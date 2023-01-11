@@ -683,6 +683,14 @@ video {
   gap: 0.25rem;
 }
 
+.gap-0\.5{
+  gap: 0.125rem;
+}
+
+.gap-0{
+  gap: 0px;
+}
+
 .gap-x-5{
   -webkit-column-gap: 1.25rem;
           column-gap: 1.25rem;
@@ -860,6 +868,10 @@ video {
 
 .pb-5{
   padding-bottom: 1.25rem;
+}
+
+.pt-1{
+  padding-top: 0.25rem;
 }
 
 .text-center{

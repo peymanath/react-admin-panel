@@ -1,5 +1,5 @@
 import React from 'react'
-import ArrowBackIos from '@mui/icons-material/ArrowBackIos'
+import ChevronLeft from '@mui/icons-material/ChevronLeft'
 import Close from '@mui/icons-material/Close'
 import NotificationsActive from '@mui/icons-material/NotificationsActive'
 
@@ -26,12 +26,12 @@ export default function MessageItem(Data) {
 
             </ul>
 
-            <div className={`px-5 py-2 ${Data.textColor} ${Data.bgColor} ${Data.hoverColor} hover:text-white duration-300`}>
-                <a href="#" className="flex items-center justify-center gap-1">
+            <div className="px-5 py-2 text-blue-500 hover:text-white hover:bg-blue-500 duration-300">
+                <a href="#" className="flex items-center justify-center gap-0.5">
 
-                    <span>مشاهده پیام ها</span>
+                    <span className='pt-1'>مشاهده پیام ها</span>
 
-                    <ArrowBackIos sx={{ fontSize: 13 }} />
+                    <ChevronLeft sx={{ fontSize: 16 }} />
 
                 </a>
             </div>
