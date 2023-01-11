@@ -1,9 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-    <h1>hi peyman</h1>
+      <nav style={{
+        borderBottom: "solid 1px",
+        paddingBottom: "1rem",
+      }}>
+        <Link to="/peyman"> peyman </Link> | {" "}
+        <Link to="/"> Home </Link> | {" "}
+      </nav>
     </>
   );
 }
