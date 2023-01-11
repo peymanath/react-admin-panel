@@ -5,7 +5,6 @@ import ProfileImage from '../../Components/ProfileImage';
 import Iconheader from './Iconheader';
 import NotificationsActive from '@mui/icons-material/NotificationsActive'
 
-
 export default function Header() {
     return (
         <div className="flex-1 w-full md:w-8/12 lg:w-4/6">
@@ -20,9 +19,7 @@ export default function Header() {
                             <Menu></Menu>
                         </div>
 
-
                         <ProfileImage />
-
 
                     </div>
 
@@ -30,12 +27,29 @@ export default function Header() {
 
                     <div className="flex flex-wrap gap-3">
 
-                        <Iconheader Counter={''} colorCounter="bg-red-500" counter={"۱۰"}>
+                        <Iconheader Counter={''} color={["bg-red-500" , "hover:bg-red-500"]} counter={(10)}>
                             <NotificationsActive/>
+                            <NotificationsActive sx={{fontSize: 15}}/>
                         </Iconheader>
 
-                        <Iconheader Counter={''} colorCounter="bg-red-500" counter={"۱۰"}>
+                        <Iconheader Counter={''} color={["bg-yellow-500" , "hover:bg-yellow-500"]} counter={(10)}>
                             <NotificationsActive/>
+                            <NotificationsActive sx={{fontSize: 15}}/>
+                        </Iconheader>
+
+                        <Iconheader Counter={''} color={["bg-yellow-500" , "hover:bg-yellow-500"]} counter={(10)}>
+                            <NotificationsActive/>
+                            <NotificationsActive sx={{fontSize: 15}}/>
+                        </Iconheader>
+
+                        <Iconheader Counter={''} color={["bg-yellow-500" , "hover:bg-yellow-500"]} counter={(10)}>
+                            <NotificationsActive/>
+                            <NotificationsActive sx={{fontSize: 15}}/>
+                        </Iconheader>
+
+                        <Iconheader Counter={''} color={["bg-yellow-500" , "hover:bg-yellow-500"]} counter={(10)}>
+                            <NotificationsActive/>
+                            <NotificationsActive sx={{fontSize: 15}}/>
                         </Iconheader>
 
                     </div>
