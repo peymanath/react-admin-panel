@@ -4,12 +4,12 @@ import Menu from '@mui/icons-material/Menu';
 
 export default function Sidebar() {
     return (
-        <aside className='sidebar-menu hidden md:flex md:flex-col bg-gray text-white'>
+        <aside className='sidebar-menu hidden md:flex md:flex-col bg-c-gray text-white'>
             <header className="bg-primary">
 
                 <div className="flex py-3 px-4">
 
-                    <div className="flex gap-x-5 bg-gray text-white w-full rounded-md">
+                    <div className="flex gap-x-5 bg-c-gray text-white w-full rounded-md">
                         <div className="btn-menu flex py-1.5 px-2 cursor-pointer">
                             <Menu></Menu>
                         </div>

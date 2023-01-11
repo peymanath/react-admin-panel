@@ -17,10 +17,10 @@ module.exports = {
         padding: '1rem'
       },
       colors: {
-        gray: '#1F2D3D',
         primary: '#76EE59',
         headerborder: '#C4C4C4',
         input: '#eee',
+        'c-gray': '#1F2D3D',
         'c-red': '#DC3545',
         'c-green': '#28A745',
       },
