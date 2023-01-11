@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from '@mui/icons-material/Menu';
 import SearchForm from '../../Components/SearchForm';
 import ProfileImage from '../../Components/ProfileImage';
-import IconBackground from '../../Components/IconBackground/IconBackground';
+import IconBackground from '../../Components/IconBackground';
 import NotificationsActive from '@mui/icons-material/NotificationsActive'
 import MessageItem from '../../Components/MessageItem'
 import Forum from '@mui/icons-material/Forum'

@@ -1,40 +1,92 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { BrowserRouter, NavLink } from 'react-router-dom'
+import Inventory2 from '@mui/icons-material/Inventory2'
 
-function SidebarNav() {
+
+function SidebarNav(Data) {
+
+    const [cilhdMenu, setCilhdMenu] = useState(false);
+
+    const navLinks = [
+        {
+            name: "خانه",
+            link: "/",
+            icon: <Inventory2 />,
+            childeren: false,
+        },
+        {
+            name: "محصولات",
+            link: "/products",
+            icon: <Inventory2 />,
+            children: true,
+            childrens: [
+                {
+                    name: "لیست محصولات",
+                    link: "/products",
+                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                },
+                {
+                    name: "افزودن محصولات",
+                    link: "/products/add",
+                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                },
+                {
+                    name: "دسته‌بندی ها",
+                    link: "/products/categoryes",
+                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                },
+                {
+                    name: "ویژگی ها",
+                    link: "/products/attributes",
+                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                },
+                {
+                    name: "برند ها",
+                    link: "/products/brands",
+                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                },
+            ]
+        },
+    ]
+
     return (
         <>
-            {/* nav items sidebar */}
-            <ul class="py-4 px-5 pl-8">
+            <ul className="py-4 px-5 pl-8">
 
-                {/* <!-- sidebar item 1  --> */}
-                <li class="pb-5">
-                    <a href="#" class="flex flex-wrap items-center justify-center gap-x-2 text-sm">
-                        <svg class="w-6 h-6">
-                            <use xlink:href="#product"></use>
-                        </svg>
-                        <span class="text-menu">افزودن محصولات جدید</span>
-                    </a>
-                </li>
-
-                {/* <!-- sidebar item 1  --> */}
-                <li class="pb-5">
-                    <a href="#" class="flex flex-wrap items-center justify-center gap-x-2 text-sm">
-                        <svg class="w-6 h-6">
-                            <use xlink:href="#product"></use>
-                        </svg>
-                        <span class="text-menu">محصولات در حال تولید</span>
-                    </a>
-                </li>
-
-                {/* <!-- sidebar item 1  --> */}
-                <li class="pb-5">
-                    <a href="#" class="flex flex-wrap items-center justify-center gap-x-2 text-sm">
-                        <svg class="w-6 h-6">
-                            <use xlink:href="#product"></use>
-                        </svg>
-                        <span class="text-menu">محصولات جدید در انبار</span>
-                    </a>
-                </li>
+                {
+                    navLinks.map(item => (
+                        <li key={item.name} className="pb-5">
+                            {
+                                item.children
+                                    ?
+                                    <div onClick={() => setCilhdMenu(!cilhdMenu)} className="cursor-pointer">
+                                        {item.icon}
+                                        <span className={Data.menuActive ? 'hidden' : ''}> {item.name}</span>
+                                    </div>
+                                    :
+                                    <NavLink to={item.link} className={`group/product flex flex-wrap items-center ${Data.menuActive ? 'justify-center' : '' } gap-x-2 text-sm`}>
+                                        {item.icon}
+                                        <span className={Data.menuActive ? 'hidden' : ''} >{item.name}</span>
+                                    </NavLink>
+                            }
+                            {
+                                item.children &&
+                                <ul className={`${cilhdMenu ? "" : "hidden"} pt-5 mr-2`}>
+                                    {item.childrens &&
+                                        item.childrens.map(item => (
+                                            <li key={item.name} className="pb-5">
+                                                <NavLink to={item.link} className={`flex flex-wrap items-center ${Data.menuActive ? 'justify-center' : ''} gap-x-2 text-sm`}>
+                                                    {item.icon}
+                                                    <span className={Data.menuActive ? 'hidden' : ''} >{item.name}</span>
+                                                </NavLink>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            }
+                        </li>
+                    ))
+                }
 
             </ul>
         </>
