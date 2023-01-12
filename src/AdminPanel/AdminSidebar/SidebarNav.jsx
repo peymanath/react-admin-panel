@@ -5,7 +5,7 @@ import RadioButtonChecked from '@mui/icons-material/RadioButtonChecked'
 import LibraryBooks from '@mui/icons-material/LibraryBooks'
 import NavbarLink from '../../Components/NavbarLink'
 
-const iconSize = 22;
+const iconSize = 17;
 const iconSizeChild = 12;
 
 function SidebarNav(Data) {

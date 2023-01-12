@@ -31,7 +31,7 @@ export default function NavbarLink(Data) {
                         {Data.navIcon}
 
                         <div className={Data.navMenuActive ? 'hidden' : 'flex items-center'}>
-                            <span> {Data.navName}</span>
+                            <span className='text-sm'> {Data.navName}</span>
                             <span className={`${cilhdMenu ? "-rotate-90" : "-rotate-0"} duration-300 transition-all`}>
                                 <ChevronLeft sx={{ fontSize: 16 }} />
                             </span>
@@ -41,7 +41,7 @@ export default function NavbarLink(Data) {
                     :
                     <NavLink to={Data.navLink} className={`group/product flex flex-wrap items-center ${Data.navMenuActive ? 'justify-center' : ''} gap-x-2 text-sm`}>
                         {Data.navIcon}
-                        <span className={Data.navMenuActive ? 'hidden' : ''} >{Data.navName}</span>
+                        <span className={`text-sm ${Data.navMenuActive ? 'hidden' : ''}`} >{Data.navName}</span>
                     </NavLink>
             }
             {
@@ -52,7 +52,7 @@ export default function NavbarLink(Data) {
                             <li key={index} className="">
                                 <NavLink to={item.link} className={`flex flex-wrap items-center ${Data.navMenuActive ? 'justify-center' : ''} gap-x-2 text-sm`}>
                                     {item.icon}
-                                    <span className={Data.navMenuActive ? 'hidden' : ''} >{item.name}</span>
+                                    <span className={`text-xs ${Data.navMenuActive ? 'hidden' : ''}`} >{item.name}</span>
                                 </NavLink>
                             </li>
                         ))
