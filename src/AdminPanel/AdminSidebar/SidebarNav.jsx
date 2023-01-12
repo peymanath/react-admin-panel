@@ -1,7 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react'
+import Home from '@mui/icons-material/Home'
 import Inventory2 from '@mui/icons-material/Inventory2'
+import RadioButtonChecked from '@mui/icons-material/RadioButtonChecked'
+import LibraryBooks from '@mui/icons-material/LibraryBooks'
 import NavbarLink from '../../Components/NavbarLink'
 
+const iconSize = 22;
+const iconSizeChild = 12;
 
 function SidebarNav(Data) {
 
@@ -9,86 +14,63 @@ function SidebarNav(Data) {
         {
             name: "خانه",
             link: "/",
-            icon: <Inventory2 />,
+            icon: <Home sx={{ fontSize: iconSize }} />,
             children: false,
             childrens: []
         },
         {
             name: "محصولات",
             link: "/products",
-            icon: <Inventory2 />,
+            icon: <Inventory2 sx={{ fontSize: iconSize }} />,
             children: true,
             childrens: [
                 {
                     name: "لیست محصولات",
                     link: "/products",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
                 {
                     name: "افزودن محصولات",
                     link: "/products/add",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
                 {
                     name: "دسته‌بندی ها",
                     link: "/products/categoryes",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
                 {
                     name: "ویژگی ها",
                     link: "/products/attributes",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
                 {
                     name: "برند ها",
                     link: "/products/brands",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
             ]
         },
         {
             name: "وبلاگ",
             link: "/blog",
-            icon: <Inventory2 />,
+            icon: <LibraryBooks sx={{ fontSize: iconSize }} />,
             children: true,
             childrens: [
                 {
                     name: "وبلاگ",
                     link: "/blog",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
                 {
                     name: "افزودن نوشته",
                     link: "/blog/add",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
                 {
                     name: "دسته‌بندی ها",
                     link: "/blog/categoryes",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
-                },
-            ]
-        },
-        {
-            name: "وبلاگ",
-            link: "/blog",
-            icon: <Inventory2 />,
-            children: true,
-            childrens: [
-                {
-                    name: "وبلاگ",
-                    link: "/blog",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
-                },
-                {
-                    name: "افزودن نوشته",
-                    link: "/blog/add",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
-                },
-                {
-                    name: "دسته‌بندی ها",
-                    link: "/blog/categoryes",
-                    icon: <Inventory2 sx={{ fontSize: 15 }} />,
+                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
                 },
             ]
         },

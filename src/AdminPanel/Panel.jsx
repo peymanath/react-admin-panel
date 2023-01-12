@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from './AdminSidebar/Sidebar'
 import Header from './AdminHeader/Header'
-import MainContent from './MainPanel/MainContent';
+import MainContent from './MainContent';
 import { BrowserRouter } from 'react-router-dom'
 
 
