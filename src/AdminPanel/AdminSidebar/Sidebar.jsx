@@ -8,7 +8,7 @@ export default function Sidebar(Data) {
 
 
     return (
-        <aside className={`sidebar-menu overflow-y-auto h-full md:flex md:flex-col bg-c-gray text-white ${Data.Active ? 'md:w-[70px]' : 'md:w-[265px]'}`}>
+        <aside className={`sidebar-menu overflow-y-auto h-full md:flex md:flex-col bg-c-gray text-white ${Data.Active ? 'md:w-[70px]' : 'md:w-[200px]'}`}>
             <header className="bg-primary">
                 
                 <div className="flex py-3 px-4">

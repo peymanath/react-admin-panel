@@ -1164,6 +1164,10 @@ textarea{
     width: 265px;
   }
 
+  .md\:w-\[200px\]{
+    width: 200px;
+  }
+
   .md\:flex-col{
     flex-direction: column;
   }
@@ -1174,5 +1178,9 @@ textarea{
 
   .md\:pr-\[265px\]{
     padding-right: 265px;
+  }
+
+  .md\:pr-\[200px\]{
+    padding-right: 200px;
   }
 }

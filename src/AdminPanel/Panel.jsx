@@ -23,7 +23,7 @@ export default function Panel() {
                     <Sidebar click={ClickMenu} Active={wisthSidebar} />
                 </div>
 
-                <div className={`flex-1 w-full pr-0 md:w-8/12 ${wisthSidebar ? "md:pr-[70px]" : "md:pr-[265px]"}  duration-300`}>
+                <div className={`flex-1 w-full pr-0 md:w-8/12 ${wisthSidebar ? "md:pr-[70px]" : "md:pr-[200px]"}  duration-300`}>
 
                     <Header />
 
