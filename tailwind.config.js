@@ -25,20 +25,9 @@ module.exports = {
         'c-green': '#28A745',
       },
 
-      animation: {
+      animation: {},
 
-        messageshow: 'fadeIn 1s',
-
-      },
-
-      keyframes: {
-
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 }
-        },
-
-      },
+      keyframes: {},
 
     },
   },

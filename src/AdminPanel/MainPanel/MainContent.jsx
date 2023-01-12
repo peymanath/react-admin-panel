@@ -10,7 +10,7 @@ export default function MainContent() {
             <Routes>
                 <Route path="/" element={<h1>اینجا خانه است</h1>} />
                 <Route path="messages" element={<Messages />} />
-                <Route path="products" element={<AddProduct />} />
+                <Route path="products/add" element={<AddProduct />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </>

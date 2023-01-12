@@ -9,7 +9,7 @@
 }
 
 .tox-promotion,
-.tox-statusbar__branding{
+.tox-statusbar__branding {
     display: none;
 }
 
@@ -28,6 +28,25 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #25282ba4;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 3px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+    border-radius: 3px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: rgb(73, 92, 113, 0.3);
+    border-radius: 3px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(73, 92, 113);
+
 }
 
 input,
@@ -67,4 +86,16 @@ textarea {
     background-position: left 0.75rem center;
     background-size: 16px 12px;
     background-repeat: no-repeat;
+}
+
+.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+    transition: height 0.3s  0.3s, opacity 0.3s;
+}
+
+.fadeIn {
+    opacity: 1;
+    visibility: visible;
+    transition: height 0.3s, opacity 0.3s,  visibility 0.3s 0.3s;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './AdminSidebar/Sidebar'
 import Header from './AdminHeader/Header'
 import MainContent from './MainPanel/MainContent';
@@ -6,14 +6,24 @@ import { BrowserRouter } from 'react-router-dom'
 
 
 export default function Panel() {
+
+    const [wisthSidebar, setWisthSidebar] = useState(false);
+
+    const ClickMenu = () => {
+        setWisthSidebar(!wisthSidebar)
+    }
+
     return (
         <BrowserRouter>
 
             <section className='flex h-full'>
 
-                <Sidebar />
 
-                <div className="flex-1 w-full md:w-8/12 lg:w-4/6">
+                <div className='fixed h-full z-[999]'>
+                    <Sidebar click={ClickMenu} Active={wisthSidebar} />
+                </div>
+
+                <div className={`flex-1 w-full pr-0 md:w-8/12 ${wisthSidebar ? "md:pr-[70px]" : "md:pr-[265px]"}  duration-300`}>
 
                     <Header />
 
