@@ -1,15 +1,14 @@
 import React from 'react';
 import Sidebar from './AdminSidebar/Sidebar'
 import Header from './AdminHeader/Header'
-// import MainContent from './MainPanel/MainContent';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import AddProduct from './Pages/AddProduct'
-import Messages from './Pages/Messages'
-import NotFound from './Pages/NotFound'
+import MainContent from './MainPanel/MainContent';
+import { BrowserRouter } from 'react-router-dom'
+
 
 export default function Panel() {
     return (
         <BrowserRouter>
+
             <section className='flex h-full'>
 
                 <Sidebar />
@@ -18,18 +17,13 @@ export default function Panel() {
 
                     <Header />
 
-                    <Routes>
+                    <MainContent />
 
-                        <Route path="/" element={<h1>اینجا خانه است</h1>} />
-                        <Route path="messages" element={<Messages />} />
-                        <Route path="products" element={<AddProduct />} />
-                        <Route path="*" element={<NotFound />} />
-
-                    </Routes>
                 </div>
 
 
             </section >
+
         </BrowserRouter>
     )
 }
