@@ -7,6 +7,7 @@ import ProductBrands from './Pages/Product/ProductBrands'
 import Blog from './Pages/Blog/Blog'
 import AddPost from './Pages/Blog/AddPost'
 import PostCategoryes from './Pages/Blog/PostCategoryes'
+import SearchResult from './Pages/Search/SearchResult'
 import Messages from './Pages/Messages'
 import NotFound from './Pages/NotFound'
 import { Routes, Route } from 'react-router-dom'
@@ -33,6 +34,9 @@ export default function MainContent() {
                 <Route path="blog" element={<Blog />} />
                 <Route path="blog/add" element={<AddPost />} />
                 <Route path="blog/categoryes" element={<PostCategoryes />} />
+
+                {/* Search Page */}
+                <Route path="/search" element={<SearchResult />} />
 
                 {/* 404 Page */}
                 <Route path="*" element={<NotFound />} />

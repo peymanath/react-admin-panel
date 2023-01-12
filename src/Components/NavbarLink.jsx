@@ -16,7 +16,7 @@ export default function NavbarLink(Data) {
         if (refContainer.current) {
 
             setHeight(refContainer.current.childNodes.length * 25 + 10)
-            console.log(refContainer.current.childNodes.length * 25)
+            
         }
     }, []);
 
