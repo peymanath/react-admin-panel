@@ -25,7 +25,7 @@ export default function Sidebar(Data) {
 
                             <span className="hidden sm:flex">پنل کاربری</span>
 
-                            <ProfileImage imgClassName="w-6 h-6rounded-full" imgAlt="عکس پروفایل"/>
+                            <ProfileImage imgClassName="w-6 h-6 rounded-sm" imgAlt="عکس پروفایل"/>
 
                         </Link>
 

@@ -4,7 +4,7 @@ import SearchForm from '../../Components/SearchForm';
 import ProfileImage from '../../Components/ProfileImage';
 import IconBackground from '../../Components/IconBackground';
 import MessageItem from '../../Components/MessageItem'
-
+import { Link } from 'react-router-dom'
 
 
 export default function Header() {
@@ -37,10 +37,16 @@ export default function Header() {
                     <div className="flex items-center md:hidden flex-wrap gap-x-5">
 
                         <div className="btn-menu-mobile flex bg-[#F2F4F6] text-[#616262] border border-input p-2 rounded-md cursor-pointer">
+
                             <Bars3BottomRightIcon className='w-6 h-6' />
+
                         </div>
 
-                        <ProfileImage imgClassName="w-10 h-10 rounded-md" imgAlt="عکس پروفایل" />
+                        <Link key="Profile" to="/" >
+
+                            <ProfileImage imgClassName="w-10 h-10 rounded-md" imgAlt="عکس پروفایل" />
+
+                        </Link>
 
                     </div>
 
