@@ -1,13 +1,14 @@
 import React from 'react'
+import ProfileImageIcon from '../Images/profileImage.png'
+import { Link } from 'react-router-dom'
 
-function ProfileImage() {
+
+export default function ProfileImage(Data) {
     return (
         <>
-            <a href="#" className="bg-gray text-white flex p-1.5 rounded-md">
-                <img src="../public/images/profileImage.png" alt="Profile Logo" className="w-6 h-6 rounded-sm" />
-            </a>
+            <Link key="Panel" to="/" className="bg-gray text-white flex rounded-md">
+                <img src={ProfileImageIcon} alt={Data.imgAlt} className={Data.imgClassName} />
+            </Link>
         </>
     )
 }
-
-export default ProfileImage

@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import ChevronLeft from '@mui/icons-material/ChevronLeft'
 
-
-
 export default function NavbarLink(Data) {
 
     const [cilhdMenu, setCilhdMenu] = useState(false)

@@ -1,11 +1,11 @@
 import React from 'react'
-import Menu from '@mui/icons-material/Menu';
+import { ChatBubbleLeftRightIcon, BellAlertIcon, Bars3BottomRightIcon } from '@heroicons/react/24/outline'
 import SearchForm from '../../Components/SearchForm';
 import ProfileImage from '../../Components/ProfileImage';
 import IconBackground from '../../Components/IconBackground';
-import NotificationsActive from '@mui/icons-material/NotificationsActive'
 import MessageItem from '../../Components/MessageItem'
-import Forum from '@mui/icons-material/Forum'
+
+
 
 export default function Header() {
 
@@ -37,10 +37,10 @@ export default function Header() {
                     <div className="flex items-center md:hidden flex-wrap gap-x-5">
 
                         <div className="btn-menu-mobile flex bg-[#F2F4F6] text-[#616262] border border-input p-2 rounded-md cursor-pointer">
-                            <Menu></Menu>
+                            <Bars3BottomRightIcon className='w-6 h-6' />
                         </div>
 
-                        <ProfileImage />
+                        <ProfileImage imgClassName="w-10 h-10 rounded-md" imgAlt="عکس پروفایل" />
 
                     </div>
 
@@ -50,7 +50,7 @@ export default function Header() {
 
                         <IconBackground clickable={true} counter={(10)} bgColor={"bg-red-500"}>
 
-                            <NotificationsActive sx={{ fontSize: 25 }} />
+                            <BellAlertIcon className='w-6 h-6' />
 
                             <MessageItem item={listMessage} textColor={"text-red-500"} bgColor={"bg-white"} hoverColor={"hover:bg-red-500"} />
 
@@ -58,14 +58,14 @@ export default function Header() {
 
                         <IconBackground clickable={true} counter={(90)} bgColor={"bg-green-500"}>
 
-                            <NotificationsActive sx={{ fontSize: 25 }} />
+                            <BellAlertIcon className='w-6 h-6' />
 
                             <MessageItem textColor={"text-green-500"} bgColor={"bg-white"} hoverColor={"hover:bg-green-500"} />
 
                         </IconBackground>
-                        
+
                         <IconBackground clickable={false} bgColor={["bg-yellow-500"]}>
-                            <Forum sx={{ fontSize: 25 }} />
+                            <ChatBubbleLeftRightIcon className='w-6 h-6' />
                         </IconBackground>
 
                     </div>

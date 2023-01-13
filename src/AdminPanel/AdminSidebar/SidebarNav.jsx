@@ -1,12 +1,9 @@
 import React from 'react'
-import Home from '@mui/icons-material/Home'
-import Inventory2 from '@mui/icons-material/Inventory2'
-import RadioButtonChecked from '@mui/icons-material/RadioButtonChecked'
-import LibraryBooks from '@mui/icons-material/LibraryBooks'
 import NavbarLink from '../../Components/NavbarLink'
+import { HomeIcon, ArchiveBoxIcon, PencilSquareIcon, StopCircleIcon } from '@heroicons/react/24/outline'
 
-const iconSize = 17;
-const iconSizeChild = 12;
+const iconSize = 'w-5 h-5 text-wite';
+const iconSizeChild = 'w-2.5 h-2.5 text-wite';
 
 function SidebarNav(Data) {
 
@@ -14,63 +11,63 @@ function SidebarNav(Data) {
         {
             name: "خانه",
             link: "/",
-            icon: <Home sx={{ fontSize: iconSize }} />,
+            icon: <HomeIcon className={iconSize} />,
             children: false,
             childrens: []
         },
         {
             name: "محصولات",
             link: "/products",
-            icon: <Inventory2 sx={{ fontSize: iconSize }} />,
+            icon: <ArchiveBoxIcon className={iconSize} />,
             children: true,
             childrens: [
                 {
                     name: "لیست محصولات",
                     link: "/products",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
                 {
                     name: "افزودن محصولات",
                     link: "/products/add",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
                 {
                     name: "دسته‌بندی ها",
                     link: "/products/categoryes",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
                 {
                     name: "ویژگی ها",
                     link: "/products/attributes",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
                 {
                     name: "برند ها",
                     link: "/products/brands",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
             ]
         },
         {
             name: "وبلاگ",
             link: "/blog",
-            icon: <LibraryBooks sx={{ fontSize: iconSize }} />,
+            icon: <PencilSquareIcon className={iconSize} />,
             children: true,
             childrens: [
                 {
                     name: "وبلاگ",
                     link: "/blog",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
                 {
                     name: "افزودن نوشته",
                     link: "/blog/add",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
                 {
                     name: "دسته‌بندی ها",
                     link: "/blog/categoryes",
-                    icon: <RadioButtonChecked sx={{ fontSize: iconSizeChild }} />,
+                    icon: <StopCircleIcon className={iconSizeChild} />,
                 },
             ]
         },
