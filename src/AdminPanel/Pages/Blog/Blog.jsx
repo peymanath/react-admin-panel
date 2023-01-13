@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 export default function Blog() {
+
+    const Title = "وبلاگ"
+    useEffect(() => { document.title = Title }, [])
+
     return (
         <>
-            <h1>وبلاگ</h1>
+            <h1>{Title}</h1>
         </>
     )
 }

@@ -1,8 +1,8 @@
-import React , {useEffect} from 'react'
+import React, { useEffect } from 'react'
 
-export default function Products() {
+export default function Home() {
 
-    const Title = "لیست محصولات"
+    const Title = "پنل کاربری"
     useEffect(() => { document.title = Title }, [])
 
     return (

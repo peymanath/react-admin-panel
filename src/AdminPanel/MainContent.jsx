@@ -1,4 +1,5 @@
 import React from 'react'
+import Home from './Pages/Home/Home'
 import Products from './Pages/Product/Products'
 import AddProduct from './Pages/Product/AddProduct'
 import ProductCategories from './Pages/Product/ProductCategories'
@@ -18,7 +19,7 @@ export default function MainContent() {
             <Routes>
 
                 {/* Home Page */}
-                <Route path="/" element={<h1>اینجا خانه است</h1>} />
+                <Route path="/" element={<Home />} />
 
                 {/* Message Pages */}
                 <Route path="messages" element={<Messages />} />

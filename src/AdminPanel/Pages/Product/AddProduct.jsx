@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 export default function AddProduct() {
+
+  const Title = "افزودن محصول جدید"
+  useEffect(() => { document.title = Title }, [])
+
   return (
     <>
-        <h1>افزودن محصول جدید</h1>
+        <h1>{Title}</h1>
     </>
   )
 }

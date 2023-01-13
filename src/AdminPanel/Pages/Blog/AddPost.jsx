@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 export default function AddPost() {
+
+    const Title = "افزودن نوشته"
+    useEffect(() => { document.title = Title }, [])
+
     return (
         <>
-            <h1>افزودن نوشته</h1>
+            <h1>{Title}</h1>
         </>
     )
 }
