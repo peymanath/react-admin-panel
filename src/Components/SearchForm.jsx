@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
-import { useNavigate , useLocation} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function SearchForm() {
 
-    
+
     const [dataSearch, setDataSearch] = useState("")
 
     const goTo = useNavigate()
 
-    const location = useLocation()
-    const params = new URLSearchParams(location.search)
-
     const goToSearch = (e) => {
-        
+
         goTo('/search?q=' + dataSearch)
         setDataSearch(e.target.value)
 
