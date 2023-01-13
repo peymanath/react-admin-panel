@@ -13,6 +13,7 @@ export default function Panel() {
         setWisthSidebar(!wisthSidebar)
     }
 
+    
     return (
         <BrowserRouter>
 

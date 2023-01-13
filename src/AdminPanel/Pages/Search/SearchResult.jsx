@@ -13,7 +13,7 @@ export default function SearchResult() {
         <div className='p-10'>
             <h1>{Title}</h1>
             <span>عبارت سرچ شده: </span>
-            <span>{params.get("search")}</span>
+            <span>{params.get("q")}</span>
         </div>
     )
 }
