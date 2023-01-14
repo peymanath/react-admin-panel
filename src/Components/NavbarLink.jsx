@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import ChevronLeft from '@mui/icons-material/ChevronLeft'
+import { ChevronLeftIcon } from '@heroicons/react/24/outline'
 
 export default function NavbarLink(Data) {
 
@@ -14,7 +14,7 @@ export default function NavbarLink(Data) {
         if (refContainer.current) {
 
             setHeight(refContainer.current.childNodes.length * 25 + 10)
-            
+
         }
     }, []);
 
@@ -28,10 +28,10 @@ export default function NavbarLink(Data) {
                     <div onClick={() => setCilhdMenu(!cilhdMenu)} className={`flex cursor-pointer items-center ${Data.navMenuActive ? 'justify-center' : ''} gap-x-2 text-sm`}>
                         {Data.navIcon}
 
-                        <div className={Data.navMenuActive ? 'hidden' : 'flex items-center'}>
+                        <div className={`${Data.navMenuActive ? 'hidden' : 'flex items-center'} gap-x-1`}>
                             <span className='text-sm'> {Data.navName}</span>
                             <span className={`${cilhdMenu ? "-rotate-90" : "-rotate-0"} duration-300 transition-all`}>
-                                <ChevronLeft sx={{ fontSize: 16 }} />
+                                <ChevronLeftIcon className='w-2.5 h-2.5 text-white' />
                             </span>
                         </div>
 

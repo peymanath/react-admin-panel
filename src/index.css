@@ -54,6 +54,10 @@ select,
 textarea {
     @apply focus:outline-none focus-visible:outline-none focus:placeholder:text-transparent;
 }
+/* 
+*{
+    font-family: "Vazirmatn" !important
+} */
 
 textarea {
     @apply resize-none;
@@ -91,11 +95,11 @@ textarea {
 .fadeOut {
     opacity: 0;
     visibility: hidden;
-    transition: height 0.3s  0.3s, opacity 0.3s;
+    transition: height 0.3s 0.3s, opacity 0.3s;
 }
 
 .fadeIn {
     opacity: 1;
     visibility: visible;
-    transition: height 0.3s, opacity 0.3s,  visibility 0.3s 0.3s;
+    transition: height 0.3s, opacity 0.3s, visibility 0.3s 0.3s;
 }
