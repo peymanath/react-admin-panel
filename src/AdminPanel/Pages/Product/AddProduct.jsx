@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ButtonRedBorder, ButtonGreenBorder, ButtonGreen, ButtonRed } from '../../../Components/Button'
+import { Button } from '../../../Components/Button'
 import { SingleHeaderPage } from '../../../Components/SingleHeaderPage'
 
 export default function AddProduct() {
@@ -8,7 +8,7 @@ export default function AddProduct() {
   useEffect(() => { document.title = Title }, [])
 
   const SubmitForm = (e) => {
-      e.preventDefault();
+    e.preventDefault();
   }
 
   return (
@@ -21,8 +21,9 @@ export default function AddProduct() {
           <h1>{Title}</h1>
 
           <>
-            <ButtonRed text="پیش نویس" name="submit" />
-            <ButtonGreenBorder text="تایید و انتشار" name="submit" />
+            <Button text="پیش نویس" name="submit" color={'Red'} border={false} />
+
+            <Button text="تایید و انتشار" name="submit" color={'Green'} border={true}/>
           </>
 
         </SingleHeaderPage>
